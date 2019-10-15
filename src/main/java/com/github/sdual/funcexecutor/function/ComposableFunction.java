@@ -22,15 +22,7 @@ public class ComposableFunction<T, R, S> implements Function<T, S> {
 
   @SuppressWarnings("unchecked")
   public ComposableFunction(Method method, Function<R, S> nextFunc) {
-    this.func = x -> {
-      Object result;
-      try {
-        result = method.invoke(null, x);
-      } catch (IllegalAccessException | InvocationTargetException e) {
-        throw new RuntimeException(e);
-      }
-      return (R) result;
-    };
+    this.func = toFunction(method);
     this.nextFunc = nextFunc;
   }
 
@@ -42,6 +34,18 @@ public class ComposableFunction<T, R, S> implements Function<T, S> {
   @Override
   public S apply(T t) {
     return nextFunc.compose(func).apply(t);
+  }
+
+  private Function<T, R> toFunction(Method method) {
+    return input -> {
+      Object result;
+      try {
+        result = method.invoke(null, input);
+      } catch (IllegalAccessException | InvocationTargetException e) {
+        throw new RuntimeException(e);
+      }
+      return (R) result;
+    };
   }
 
 }
