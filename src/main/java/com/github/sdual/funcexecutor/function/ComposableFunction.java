@@ -16,8 +16,7 @@ public class ComposableFunction<T, R, S> implements Function<T, S> {
 
   @SuppressWarnings("unchecked")
   public ComposableFunction(Function<T, R> func) {
-    this.func = func;
-    this.nextFunc = (Function<R, S>) Function.identity();
+    this(func, (Function<R, S>) Function.identity());
   }
 
   @SuppressWarnings("unchecked")

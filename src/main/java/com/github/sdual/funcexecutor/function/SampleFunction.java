@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 public class SampleFunction {
+  // なんでもよいテスト用の関数
 
   public static String addTenString(Integer input) {
     int result = input + 10;
