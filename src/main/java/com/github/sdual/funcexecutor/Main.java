@@ -1,12 +1,9 @@
 package com.github.sdual.funcexecutor;
 
-import com.github.sdual.funcexecutor.function.ComposableFunction;
-import com.github.sdual.funcexecutor.function.SampleFunction;
 import com.sun.tools.javac.util.Pair;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import com.typesafe.config.ConfigList;
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;
 import java.util.function.Function;
