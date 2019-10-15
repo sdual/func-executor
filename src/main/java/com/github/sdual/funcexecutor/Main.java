@@ -8,7 +8,7 @@ import java.util.function.Function;
 public class Main {
 
   public static void main(String[] args) throws NoSuchMethodException, ClassNotFoundException {
-    // このような関数と引数の名前を設定ファイルからとってきたとする。
+    // このような関数と引数の型の名前を設定ファイルからとってきたとする。
     List<Pair<String, String>> functionNameList = new ArrayList<>();
     functionNameList.add(Pair.of("addTenString", "java.lang.Integer"));
     functionNameList.add(Pair.of("transformDouble", "java.lang.String"));
