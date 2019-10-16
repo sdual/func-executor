@@ -27,7 +27,7 @@ public class Main {
     functionNameList.add(Pair.of("transformToDouble", "java.lang.String"));
     functionNameList.add(Pair.of("splitWithDot", "java.lang.Double"));
 
-    // 設定の上から動的に関数を合成する。
+    // 上の設定を使って動的に関数を合成する。
     Function<Integer, List<String>> f1 = FunctionComposer.compose(functionNameList);
     // 合成関数を実行
     System.out.println(f1.apply(10));
