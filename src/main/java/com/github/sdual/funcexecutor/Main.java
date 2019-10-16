@@ -10,9 +10,9 @@ public class Main {
   public static void main(String[] args) throws NoSuchMethodException, ClassNotFoundException {
     // このような関数と引数の型の名前を設定ファイルからとってきたとする。
     List<Pair<String, String>> functionNameList = new ArrayList<>();
-    functionNameList.add(Pair.of("addTenString", "java.lang.Integer"));
-    functionNameList.add(Pair.of("transformDouble", "java.lang.String"));
-    functionNameList.add(Pair.of("split", "java.lang.Double"));
+    functionNameList.add(Pair.of("addAndToString", "java.lang.Integer"));
+    functionNameList.add(Pair.of("transformToDouble", "java.lang.String"));
+    functionNameList.add(Pair.of("splitWithDot", "java.lang.Double"));
 
     // 設定の上から順番に関数を合成する。
     Function<Integer, List<String>> f2 = FunctionComposer.compose(functionNameList);
