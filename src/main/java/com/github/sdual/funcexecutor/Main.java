@@ -13,12 +13,11 @@ public class Main {
 
     // 関数の合成
     Function<Integer, List<String>> f2 =
-        new ComposableFunction<>(SampleFunction::addAndToString,
-            new ComposableFunction<>(SampleFunction::transformToDouble,
-                new ComposableFunction<>(SampleFunction::splitWithDot)));
+        ComposableFunction.of(SampleFunction::addAndToString,
+            ComposableFunction.of(SampleFunction::transformToDouble,
+                ComposableFunction.of(SampleFunction::splitWithDot)));
 
     System.out.println(f2.apply(10));
-
 
     // 設定ファイルから関数名をとってきて、動的に関数合成をする。
     // このような関数と引数の型の名前を設定ファイルからとってきたとする。
