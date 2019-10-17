@@ -13,9 +13,9 @@ public class Main {
 
     // 関数の合成
     Function<Integer, List<String>> f2 =
-        ComposableFunction.of(SampleFunction::addAndToString,
-            ComposableFunction.of(SampleFunction::transformToDouble,
-                ComposableFunction.of(SampleFunction::splitWithDot)));
+        ComposableFunction.from(SampleFunction::addAndToString,
+            ComposableFunction.from(SampleFunction::transformToDouble,
+                ComposableFunction.from(SampleFunction::splitWithDot)));
 
     System.out.println(f2.apply(10));
 

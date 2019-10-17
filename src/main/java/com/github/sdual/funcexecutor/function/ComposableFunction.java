@@ -29,11 +29,11 @@ public class ComposableFunction<T, R, S> implements Function<T, S> {
     this(method, (Function<R, S>) Function.identity());
   }
 
-  public static <T, R, S> ComposableFunction<T, R, S> of(Function<T, R> func) {
+  public static <T, R, S> ComposableFunction<T, R, S> from(Function<T, R> func) {
     return new ComposableFunction<>(func);
   }
 
-  public static <T, R, S> ComposableFunction<T, R, S> of(Function<T, R> func,
+  public static <T, R, S> ComposableFunction<T, R, S> from(Function<T, R> func,
       Function<R, S> nextFunc) {
     return new ComposableFunction<>(func, nextFunc);
   }
