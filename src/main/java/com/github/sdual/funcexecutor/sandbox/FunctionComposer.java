@@ -1,7 +1,5 @@
-package com.github.sdual.funcexecutor;
+package com.github.sdual.funcexecutor.sandbox;
 
-import com.github.sdual.funcexecutor.function.ComposableFunction;
-import com.github.sdual.funcexecutor.function.SampleFunction;
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.function.Function;

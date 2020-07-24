@@ -1,4 +1,4 @@
-package com.github.sdual.funcexecutor.function;
+package com.github.sdual.funcexecutor.sandbox;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

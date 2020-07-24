@@ -1,4 +1,4 @@
-package com.github.sdual.funcexecutor.function;
+package com.github.sdual.funcexecutor.sandbox;
 
 import java.util.Arrays;
 import java.util.List;

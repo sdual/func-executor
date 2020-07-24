@@ -1,4 +1,4 @@
-package com.github.sdual.funcexecutor;
+package com.github.sdual.funcexecutor.sandbox;
 
 public class FunctionName {
 

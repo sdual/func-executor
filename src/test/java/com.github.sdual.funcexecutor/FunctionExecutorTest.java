@@ -3,8 +3,10 @@ package com.github.sdual.funcexecutor;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-import com.github.sdual.funcexecutor.function.ComposableFunction;
-import com.github.sdual.funcexecutor.function.SampleFunction;
+import com.github.sdual.funcexecutor.sandbox.ComposableFunction;
+import com.github.sdual.funcexecutor.sandbox.FunctionComposer;
+import com.github.sdual.funcexecutor.sandbox.FunctionName;
+import com.github.sdual.funcexecutor.sandbox.SampleFunction;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
